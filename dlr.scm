@@ -127,10 +127,6 @@
       (let((R(- n1 1)))
         (* (all_dead R C N) (poisson n1 R))))))
 
-(define mttdl
-  (lambda(N C)
-    (/ (/ 1 (c_durable N C)) 2.4)))
-
 
 
   
