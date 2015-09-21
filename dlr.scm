@@ -61,10 +61,13 @@
            (/ (* (expt n1 R)
                  (inexact->exact (exp (/ n1 -1))))
               (fact 1 R)))
-          (else
-           (/ (* (expt n1 R)
-          (exp (/ n1 -1)))
-       (fact 1 R))))))
+          ((= R 0)
+           (* (expt n1 R)
+                 (exp (/ n1 -1))))
+           (else
+            (/ (* (expt n1 R)
+                  (exp (/ n1 -1)))
+               (fact 1 R))))))
 
 ; 计算坏掉的R块盘中，恰巧能组成多少个副本组合
 ; 副本数为C
